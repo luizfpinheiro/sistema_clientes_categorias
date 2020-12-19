@@ -1,0 +1,32 @@
+version: "3"
+services:
+  db:
+    image: postgres:9.6
+    container_name: "postgres_projeto_igd"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - TZ=GMT
+
+  api:
+    container_name: django_api
+    build:
+      context: ./api
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  vue-ui:
+    container_name: vue_ui
+    build:
+      context: ./client
+    ports:
+      - "8080:8080"
+    volumes:
+       - ./client:/usr/src/app/client
+       - /usr/src/app/client/node_modules
