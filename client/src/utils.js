@@ -1,21 +1,7 @@
-const axios = require('axios');
+import axios from 'axios';
 
-function get(url) {
-    return axios.get(url);
-}
+const api = axios.create({
+    baseURL: 'http://172.19.0.4:8000',
+});
 
-function post(url, params) {
-    return axios.post(url, params);
-}
-
-function put(url, params) {
-    return axios.put(url, params);
-}
-
-function remove(url, params) {
-    return axios.delete(url, params);
-}
-
-
-export default { get, post, put, remove }
-
+export default api;
