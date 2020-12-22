@@ -11,7 +11,7 @@ class Categoria(models.Model):
 class Cliente(models.Model):
     nome = models.CharField(max_length=200)
     email = models.EmailField(max_length=254)
-    tags = models.ManyToManyField('Categoria')
+    tags = models.ManyToManyField('Categoria', blank=True)
     dt_cadastro = models.DateTimeField(auto_now_add=True)
 
 
