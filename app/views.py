@@ -10,6 +10,5 @@ class CategoriaViewSet(viewsets.ModelViewSet):
 
 
 class ClienteViewSet(viewsets.ModelViewSet):
-    queryset = Cliente.objects.all()
+    queryset = Cliente.objects.all().order_by('nome')
     serializer_class = ClienteSerializer
-

@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <div id="nav">
       <router-link to="clientes">Clientes</router-link> |
       <router-link to="categorias">Categorias</router-link>
     </div>
     <router-view/>
-  </div>
+  </v-app>
 </template>
 
 <style>
@@ -28,5 +28,13 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+table > tbody > tr {
+  background-color: rgb(165, 165, 166) !important;
+}
+
+table {
+  background-color: #cccaca !important;
 }
 </style>
