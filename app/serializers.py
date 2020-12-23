@@ -8,6 +8,7 @@ class CategoriaSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         data = model_to_dict(instance)
         data['dt_cadastro'] = instance.dt_cadastro.strftime("%d-%m-%Y")
+        data['qtd_clientes'] = Cliente.objects.filter(tags__in=[instance.id]).count()
         
         return data
 
