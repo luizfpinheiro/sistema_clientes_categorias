@@ -21,7 +21,7 @@
               </template>
               <v-card>
                 <v-card-title>
-                  <span class="headline">Categoria</span>
+                  <span class="headline">Tag</span>
                 </v-card-title>
                 <v-card-text>
                   <v-container>
@@ -108,7 +108,7 @@
                     <v-card-title class="headline">
                       Confirmar exclusão?
                     </v-card-title>
-                    <v-card-text>Categoria: {{ item.nome }}</v-card-text>
+                    <v-card-text>Tag: {{ item.nome }}</v-card-text>
                     <v-card-actions>
                       <v-spacer></v-spacer>
                       <v-btn
@@ -148,7 +148,7 @@ export default {
       categorias: [],
       categorias_url: "/categorias/",
       headers: [
-        { text: "Nome da Categoria", align: "start", value: "nome" },
+        { text: "Nome da Tag", align: "start", value: "nome" },
         {
           text: "Quantidade de Clientes",
           align: "start",

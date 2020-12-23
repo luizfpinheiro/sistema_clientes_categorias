@@ -12,7 +12,7 @@ const routes = [
     component: Clientes
   },
   {
-    path: '/categorias',
+    path: '/tags',
     name: 'Categorias',
     component: Categorias,
   }

@@ -2,7 +2,7 @@
   <v-app id="app">
     <div id="nav">
       <router-link to="clientes">Clientes</router-link> |
-      <router-link to="categorias">Categorias</router-link>
+      <router-link to="tags">Tags</router-link>
     </div>
     <router-view/>
   </v-app>
